@@ -34,6 +34,7 @@ const Section = ({children, title}): Node => {
   let tab = [3,4,5,6,1,7,100];
   let mean_val = _.mean(tab);
   let min_val = _.min(tab);
+  let max_val = _.max(tab);
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -47,6 +48,7 @@ const Section = ({children, title}): Node => {
       </Text>
         <Text>średnia : {mean_val}</Text>
       <Text>minimum : {min_val}</Text>
+      <Text>maksimum : {max_val}</Text>
     </View>
   );
 };
