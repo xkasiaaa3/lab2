@@ -31,9 +31,9 @@ import {
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   const _ = require('lodash');
-  let tab = [3,4,5,6,7,100];
+  let tab = [3,4,5,6,1,7,100];
   let mean_val = _.mean(tab);
-
+  let min_val = _.min(tab);
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -46,6 +46,7 @@ const Section = ({children, title}): Node => {
         {title}
       </Text>
         <Text>średnia : {mean_val}</Text>
+      <Text>minimum : {min_val}</Text>
     </View>
   );
 };
@@ -69,7 +70,7 @@ const App: () => Node = () => {
              backgroundColor: isDarkMode ? Colors.black : Colors.white,
            }}>
 
-           <Section title="">
+           <Section title="[3,4,5,6,1,7,100]">
            </Section>
          </View>
        </ScrollView>
